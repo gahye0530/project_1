@@ -22,6 +22,9 @@ def run_area_search(df) :
     
     # st.bar_chart(chart_df, width = 700, height = 500, use_container_width=False)
     st.bar_chart(chart_df)
+    add_select = st.multiselect('추가검색', chart_df.index)
+    # st.write(df['mcate_nm']==add_select)
+    # condition = condition & df.loc['mcate_nm']==add_select
     st.dataframe(df.loc[condition, ['poi_nm','mcate_nm','sido_nm','bemd_nm','ri_nm', 'beonji']])
 
     # altair는 value_counts한 데이터프레임 chart_df가 적합하지 않은것같고..

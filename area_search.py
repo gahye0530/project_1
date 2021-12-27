@@ -3,7 +3,6 @@ import streamlit as st
 import pandas as pd
 from draw_map import run_draw_map
 
-
 def run_area_search(df) :
 
     st.header('지역별 검색')
